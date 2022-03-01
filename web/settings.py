@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-wmz7i0m#^^kf-%q%^2pxiu7%j)s&5lwhst1&&_ytoat-r-*@nt'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['142.93.96.137','behzodasliddinov.uz','www.behzodasliddinov.uz']
+ALLOWED_HOSTS = ['157.230.97.78','behzodasliddinov.uz','www.behzodasliddinov.uz']
 
 
 # Application definition
@@ -78,9 +78,9 @@ WSGI_APPLICATION = 'web.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'portfolio',
-        'USER': 'portfolio',
-        'PASSWORD': 'behzod',
+        'NAME': 'bekki',
+        'USER': 'bekki',
+        'PASSWORD': 'bekki',
         'HOST': 'localhost',
         'PORT': '',
     }
