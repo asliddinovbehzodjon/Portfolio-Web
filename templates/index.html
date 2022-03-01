@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Behzod Asliddinov Shaxsiy Web sahifasi">
+    <meta name="keywords" content="Behzod, Behzod Developer, Behzod Asliddinov, Django Developer,Behzod Django, Behzod Telegram Bot Maker, Telegram bot">
+    <meta name="author" content="Behzod Asliddinov">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Behzod Asliddinov 
+    </title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- custom css file link  -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="shortcut icon" type="image/png" href="{% static 'image/favicon.png' %}"/>
+
+
+
+</head>
+<body>
+    
+<!-- header section starts  -->
+{% load static %}
+<header class="header">
+
+    <div class="user">
+       {% for user in profile  %}
+       <img src="{{user.imageShow}}" alt="">
+         
+       {% endfor %}
+        <h3>Asliddinov Behzod</h3>
+        <p>Full Stack Web Developer</p>
+    </div>
+
+    <nav class="navbar">
+        <a href="#home">Asosiy sahifa</a>
+        <a href="#about">Men haqimda</a>
+        <a href="#services">xizmatlar</a>
+        <a href="#portfolio">portfolio</a>
+        <a href="#lessons">darslar</a>
+        <a href="#contact">bog'lanish</a>
+    </nav>
+
+</header>
+
+<!-- header section ends -->
+
+<div id="menu-btn" class="fas fa-bars"></div>
+
+<!-- theme toggler  -->
+
+<div id="theme-toggler" class="fas fa-moon"></div>
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+    <div class="content">
+        <h3>Asliddinov Behzod</h3>
+        <p>FullStack Web dasturchi va Telegram Bot ustasi</p>
+        {% for cv1 in cvs %}
+        <a href="{{cv1.cv.url}}" target="_blank" class="btn">CV ni ko'rish</a>
+        {% endfor %}
+    </div>
+
+    <div class="share">
+        {% for link in links  %}
+        <a href="tel:{{link.phone}}" class="fa fa-mobile-phone" target="_blank"></a>
+        <a href="{{link.telegram}}" class="fab fa-telegram" target="_blank"></a>
+        <a href="{{link.facebook}" class="fab fa-facebook-f" target="_blank"></a>
+        <!-- <a href="#" class="fab fa-twitter"></a> -->
+        <a href="{{link.instagram}}" class="fab fa-instagram" target="_blank"></a>
+        <a href="{{link.linkedin}}" class="fab fa-linkedin" target="_blank"></a>
+        <a href="{{link.youtube}}" class="fab fa-youtube" target="_blank"></a>
+        {% endfor %}
+    </div>
+
+</section>
+
+<!-- home section ends -->
+
+<!-- about section starts  -->
+
+<section class="about" id="about">
+
+    <h1 class="heading"> <span>Men</span> haqimda</h1>
+
+    <div class="row">
+
+        <div class="box-container">
+            <div class="box">
+                <h3>1.5+</h3>
+                <p> yillik tajriba</p>
+            </div>
+            <div class="box">
+                <h3>30+</h3>
+                <p> xursand mijozlar</p>
+            </div>
+            <div class="box">
+                <h3>190+</h3>
+                <p> mehnat soati</p>
+            </div>
+            <div class="box">
+                <h3>10+</h3>
+                <p> mukofotlar sovrindori</p>
+            </div>
+        </div>
+
+        <div class="content">
+            <h3>Mening ismim<span> Behzod Asliddinov</span></h3>
+            <p>Men hozirda Toshkent Axborot Texnologiyalar Universiteti 3-bosqich talabasiman.Hamda FullStack Web dasturchi sifatida faoliyat yuritaman.Quyidagi yo'nalishlar bo'yicha murojaat qilishiz mumkin: <br>
+            1.Web Sayt tayyorlash
+        <br>
+    2.Telegram bot tayyorlash <br>
+</p>
+            <a href="#" class="btn">Bog'lanish</a>
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="progress">
+            <h3>Web dasturlash <span>90%</span> </h3>
+            <div class="bar bar-1-1"><span></span></div>
+            <h3> Frontend dasturlash <span>80%</span> </h3>
+            <div class="bar bar-1-2"><span></span></div>
+            
+        </div>
+
+        <div class="progress">
+            <h3> Backend dasturlash <span>95%</span> </h3>
+            <div class="bar bar-2-1"><span></span></div>
+            <h3>Telegram bot<span>85%</span> </h3>
+            <div class="bar bar-1-3"><span></span></div>
+           
+        </div>
+
+    </div>
+
+</section>
+
+<!-- about section ends -->
+
+<!-- services section starts  -->
+
+<section class="services" id="services">
+
+    <h1 class="heading">mening <span>xizmatlarim</span> </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <i class="fas fa-code"></i>
+            <h3>Web sayt tayyorlash</h3>
+            <p>Istalgan turdagi Web saytlar tayyorlash.Masalan: Internet magazin,Blog,Axborot beruvchi saytlar</p>
+        </div>
+
+        <div class="box">
+            <i class="fa fa-telegram"></i>
+            <h3>telegram bot tayyorlash</h3>
+            <p>istalgan turdagi telegram bor tayyorlash va uni serverga qo'yish.Arzon narxda va sifatli ko'rinishda</p>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-chalkboard-teacher"></i>
+            <h3>FullStack Web dasturlash kursi</h3>
+            <p>FullStack Web dasturlash kursi  bu sizga qisqa muddatda Web dasturchi bo'lishizga yordam beradi.<br>
+            Kurs davomiyligi 6 oy.Kursimiz 3 bosqichdan iborat. <br>
+        I.Frontend Verstka: Html,Css,Bootstrap
+    <br>II.Backend: Python,Telegram bot,Django,Django Rest Framework <br>III.Frontend Framewrok: Javascript,Vuejs</p>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-chalkboard-teacher"></i>
+            <h3>Backend dasturlash kursi</h3>
+            <p>Backend  dasturlash kursi  bu sizga qisqa muddatda Backend dasturchi bo'lishizga yordam beradi.<br>
+                Kurs davomiyligi 4 oy.Kursimiz 3 bosqichdan iborat. <br>
+            I.Python Beginner
+        <br>II.Backend: Python OOP,Telegram bot<br>III.Django,Django Rest Framework </p>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-chalkboard-teacher"></i>
+            <h3>Telegram bot dasturlash kursi</h3>
+            <p>Telegram bot  dasturlash kursi  bu sizga qisqa muddatda Telegram bot dasturchi bo'lishizga yordam beradi.<br>
+                Kurs davomiyligi 2 oy.Kursimiz 2 bosqichdan iborat. <br>
+            I.Python Beginner
+        <br>II.Backend:Telegram bot</p>
+        </div>
+        <div class="box">
+            <i class="fas fa-chalkboard-teacher"></i>
+            <h3>Foundation dasturlash kursi</h3>
+            <p>Foundation dasturlash kursi  bu sizga qisqa muddatda dasturlash olaimiga kirishizga yordam beradi.<br>
+                Kurs davomiyligi 1 oy.Kursda dasturlash haqida tushuncha olasiz bu Python dasturlash tili orqali tushuntiriladi.
+        </div>
+
+
+      
+    </div>
+
+</section>
+
+<!-- services section ends -->
+
+<!-- portfolio section starts  -->
+
+<section class="portfolio" id="portfolio">
+
+    <h1 class="heading">Qilingan <span>ishlar</span> </h1>
+
+    <div class="box-container">
+
+       {% for portfolio in portfolios  %}
+       <div class="box">
+        <img src="{{portfolio.image.url}}" alt="">
+        <div class="content">
+            <h3>{{portfolio.title}}</h3>
+            <a href="{{portfolio.url}}" class="btn" target="_blank">Portfolioni ko'rish</a>
+        </div>
+    </div>
+
+ 
+       {% endfor %}
+     
+
+        
+
+       
+       
+
+    </div>
+    <div class="pagination mt-3">
+        
+        {% if portfolios.has_previous %}
+        <a class="page-link" href="?page={{portfolios.previous_page_number}}" aria-label="Orqaga">
+            <span aria-hidden="true">&laquo;</span>
+          </a>
+          {% else %}
+          <a href="#portfolio" aria-label="Orqaga">
+            <span aria-hidden="true">&laquo;</span>
+          </a>
+            
+        {% endif %}
+            
+        <a  href="?page={{portfolios.number}}">{{portfolios.number}}</a>
+        
+        {% if portfolios.has_next %}
+        <a  href="?page={{portfolios.next_page_number}}" aria-label="Oldinga">
+            <span aria-hidden="true">&raquo;</span>
+            {% else %}
+            <a  href="#portfolio" aria-label="Oldinga">
+                <span aria-hidden="true">&raquo;</span>
+                </a>
+
+        {% endif %}
+            
+    </div>
+</section>
+
+<section class="portfolio" id="lessons">
+
+    <h1 class="heading">Youtubeda<span> chiqqan so'ngi darslar</span> </h1>
+
+    <div class="box-container">
+
+        {% for post in posts  %}
+        <div class="box">
+         <img src="{{post.image.url}}" alt="">
+         <div class="content">
+             <h3>{{post.title}}</h3>
+             <a href="{{post.url}}" class="btn" target="_blank">Darsni ko'rish</a>
+         </div>
+     </div>
+ 
+  
+        {% endfor %}
+    </div>
+    <div class="pagination mt-3">
+        
+        {% if posts.has_previous %}
+        <a class="page-link" href="?page={{posts.previous_page_number}}" aria-label="Orqaga">
+            <span aria-hidden="true">&laquo;</span>
+          </a>
+          {% else %}
+          <a href="#lessons" aria-label="Orqaga">
+            <span aria-hidden="true">&laquo;</span>
+          </a>
+            
+        {% endif %}
+            
+        <a  href="?page={{posts.number}}">{{posts.number}}</a>
+        
+        {% if posts.has_next %}
+        <a  href="?page={{posts.next_page_number}}" aria-label="Oldinga">
+            <span aria-hidden="true">&raquo;</span>
+            {% else %}
+            <a  href="#lessons" aria-label="Oldinga">
+                <span aria-hidden="true">&raquo;</span>
+                </a>
+
+        {% endif %}
+            
+    </div>
+</section>
+
+<!-- portfolio section ends -->
+
+<!-- contact section starts -->
+
+<section class="contact" id="contact">
+
+    <h1 class="heading"> <span>Men bilan</span> bog'lanish </h1>
+
+    <form method="POST">
+        {% csrf_token %}
+        <input type="text" placeholder="Ismingizni kiriting..." class="box"  name="name" required>
+        <input type="email" placeholder="Email manzilingizni kiriting..." class="box" name="email" required>
+        <input type="text" placeholder="Xabaringizni mavzusi..." class="box" name="subject" required>
+        <textarea name="message" class="box" placeholder="Xabaringizni kiriting..." id="" cols="30" rows="10" required></textarea >
+        <input type="submit" value="Yuborish" class="btn">
+    </form>
+    
+</section>
+ 
+
+<!-- contact section ends -->
+
+<div class="credits"> Web sahifa <a href="https://t.me/Behzodjon_Asliddinov" target="_blank"><span>Asliddinov Behzod</span></a> tominidan tayyorlandi | Barcha huquqlar himoyalangan | 2022 </div>
+
+
+{% load static %}
+<script src="{% static 'js/script.js' %}"></script>
+
+
+
+
+
+
+</body>
+</html>
