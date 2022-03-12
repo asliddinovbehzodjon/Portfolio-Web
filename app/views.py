@@ -15,7 +15,7 @@ def mainpage(request):
     links=SofialLinks.objects.all()
     all_post=Paginator(Lessons.objects.all(),3)
     all_portfolio=Paginator(Portfolio.objects.all(),3)
-    page=request.GET.get('page')
+    page=request.GET.get('page',1)
     try:
         lessons=all_post.page(page)
     except PageNotAnInteger:
